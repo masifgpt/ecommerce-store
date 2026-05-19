@@ -9,7 +9,7 @@ A production-ready storefront interface template displaying modern techwear and 
 - **Brand Framework Title:** VORTEX E-Commerce Core
 - **Developer Engineering Identity:** Asif Codes IO
 - **Primary Technical GitHub Vault:** [github.com/masifgpt](https://github.com/masifgpt)
-- **live link:** [github.com/masifgpt](https://github.com/masifgpt)
+- **live link:** (https://ecommerce-store-mocha-gamma.vercel.app/)
 - **Deployment Velocity Status:** Standard Production Build, Edge-Compiled Integration Optimized
 
 ---
