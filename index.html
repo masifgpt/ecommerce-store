@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VORTEX by Asif Codes IO - Premium next-generation streetwear and minimalist apparel digital storefront.">
+    <title>VORTEX // Elite Minimalist Storefront</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Global Layout Toast Notification -->
+    <div class="toast" id="toast">Item successfully added to shopping cart.</div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i data-lucide="orbit" class="logo-icon"></i>
+                <span>VORTEX</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#features" class="nav-link">Philosophy</a></li>
+                    <li><a href="#products" class="nav-link">Collection</a></li>
+                    <li><a href="#about" class="nav-link">Craftsmanship</a></li>
+                    <li><a href="#faq" class="nav-link">Sizing & FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Inquiries</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Global Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button class="cart-icon-btn" id="cart-trigger" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Mobile Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slide-Out Shopping Cart Sidebar Grid Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h3>Your Selection (<span id="drawer-count">0</span>)</h3>
+            <button id="cart-close" class="close-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="drawer-items" id="drawer-items">
+            <!-- Dynamically populated via Javascript -->
+            <p class="empty-message">Your shopping bag is currently empty.</p>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-line">
+                <span>Estimated Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkout-btn">Proceed To Checkout</button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main>
+        <!-- Hero Storefront Banner Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge"><span>Edition 01</span> Limited Drop Available Worldwide</div>
+                    <h1 class="hero-title">Redefining Techwear Minimalist Aesthetics</h1>
+                    <p class="hero-desc">Engineered for absolute physical utility. Built using water-repellent weaves, luxury technical alignments, and seamless tailored layouts.</p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn-primary">Shop The Drop</a>
+                        <a href="#about" class="btn btn-secondary">Our Heritage</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Premium streetwear fashion model lookbook" class="hero-main-img">
+                        <div class="floating-glass-stat">
+                            <i data-lucide="award" class="gold-icon"></i>
+                            <div>
+                                <h5>100% Certified</h5>
+                                <p>Sustainable Materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trusted-brands">
+                <p class="brands-title">Featured and reviewed across high luxury media</p>
+                <div class="brands-slider">
+                    <div class="brand">VOGUE</div>
+                    <div class="brand">GQ MAGAZINE</div>
+                    <div class="brand">HYPEBEAST</div>
+                    <div class="brand">COMPLEX</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Core Principles / Philosophy -->
+        <section id="features" class="section scroll-animate">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Designed For Longevity, Engineered For Comfort</h2>
+                    <p class="section-subtitle">We build premium essential statements that outlast seasonal trend cycles by focusing on modular utility architectures.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card structural-card">
+                        <div class="icon-box"><i data-lucide="wind"></i></div>
+                        <h3>Thermal Equilibrium</h3>
+                        <p>Adaptive structural microfiber layers that read ambient body temperature and allow heat micro-ventilation.</p>
+                    </div>
+                    <div class="card structural-card">
+                        <div class="icon-box"><i data-lucide="feather"></i></div>
+                        <h3>Zero-Mass Comfort</h3>
+                        <p>Ultra-lightweight fabric matrices offering full physical dynamic movement capabilities without layout sagging.</p>
+                    </div>
+                    <div class="card structural-card">
+                        <div class="icon-box"><i data-lucide="recycle"></i></div>
+                        <h3>Circular Lifecycle</h3>
+                        <p>Woven completely from premium upcycled oceanic polymer blends to ensure a clean carbon operational print footprint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Products Showcase Grid Catalog -->
+        <section id="products" class="section scroll-animate alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Curated Drop // Alpha Series</h2>
+                    <p class="section-subtitle">Each production batch contains serialized identification stamps. Restocks are structurally unavailable.</p>
+                </div>
+                <div class="grid grid-3">
+                    <!-- Product 1 -->
+                    <div class="card product-card" data-id="p1" data-name="Apex Technical Shell" data-price="245.00">
+                        <div class="product-img-holder">
+                            <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80" alt="Apex Technical Shell Jacket">
+                            <span class="product-tag">Waterproof</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <div>
+                                <h3>Apex Technical Shell</h3>
+                                <p class="category">Outerwear / Unisex</p>
+                            </div>
+                            <span class="price-tag">$245.00</span>
+                        </div>
+                        <button class="btn btn-secondary btn-full add-to-cart-btn">Add to Bag</button>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card product-card" data-id="p2" data-name="Matrix Modular Cargo" data-price="185.00">
+                        <div class="product-img-holder">
+                            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Matrix Modular Cargo">
+                            <span class="product-tag text-purple">Best Seller</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <div>
+                                <h3>Matrix Modular Cargo</h3>
+                                <p class="category">Bottoms / Utility</p>
+                            </div>
+                            <span class="price-tag">$185.00</span>
+                        </div>
+                        <button class="btn btn-secondary btn-full add-to-cart-btn">Add to Bag</button>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card product-card" data-id="p3" data-name="Krypton Layer Hood" data-price="135.00">
+                        <div class="product-img-holder">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="Krypton Layer Hood">
+                            <span class="product-tag">Premium Blend</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <div>
+                                <h3>Krypton Layer Hood</h3>
+                                <p class="category">Midlayers / Techwear</p>
+                            </div>
+                            <span class="price-tag">$135.00</span>
+                        </div>
+                        <button class="btn btn-secondary btn-full add-to-cart-btn">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Craftsmanship & Detailed Achievements Narrative -->
+        <section id="about" class="section scroll-animate">
+            <div class="container grid grid-2 alignment-center">
+                <div class="about-text-content">
+                    <h2 class="section-title">Woven meticulously by hand across micro-ateliers</h2>
+                    <p class="section-subtitle">We eliminate massive factory assembly tracks. Every singular pattern component is stamped, measured, and validated individually by senior technical designers.</p>
+                    <div class="metrics-dashboard">
+                        <div class="metric-block">
+                            <h4 class="metric-num" data-target="12">0</h4>
+                            <p class="metric-text">Ateliers Worldwide</p>
+                        </div>
+                        <div class="metric-block">
+                            <h4 class="metric-num" data-target="98">0%</h4>
+                            <p class="metric-text">Customer Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual-showcase">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Inside high fashion architectural workspace production house" class="craft-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Endorsements / Testimonial Carousels -->
+        <section id="testimonials" class="section scroll-animate alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Acclaimed Across Modern Design Spaces</h2>
+                    <p class="section-subtitle">Read unfiltered reactions from architectural curators, minimalists, and streetwear pioneers.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card feedback-card">
+                        <div class="star-rating"><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i></div>
+                        <p class="feedback-quote">"The Apex Technical Shell completely handles seasonal torrential rains while fitting seamlessly into standard high-end fine dining aesthetics. Absolute masterpieces."</p>
+                        <div class="profile-card">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Christian Thorne" class="avatar-img">
+                            <div>
+                                <h4>Christian Thorne</h4>
+                                <p>Lead Architect, Studio-X</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card feedback-card">
+                        <div class="star-rating"><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i></div>
+                        <p class="feedback-quote">"I am obsessed with the zero-sag cut lines on the Matrix Cargo pants. They balance technical utility pockets with clean runway geometry perfectly."</p>
+                        <div class="profile-card">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Amara Sterling" class="avatar-img">
+                            <div>
+                                <h4>Amara Sterling</h4>
+                                <p>Fashion Editor, NeoLux</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card feedback-card">
+                        <div class="star-rating"><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i><i data-lucide="star" class="fill-star"></i></div>
+                        <p class="feedback-quote">"Ordering loops via Vortex are instantaneous. The layout animations reflect the exact high-fidelity premium engineering of the physical garments."</p>
+                        <div class="profile-card">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="Kenji Takahashi" class="avatar-img">
+                            <div>
+                                <h4>Kenji Takahashi</h4>
+                                <p>Creative Director, MonoTokyo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sizing Matrix & Product Lifecycle Accordion FAQ -->
+        <section id="faq" class="section scroll-animate">
+            <div class="container matches-small-width">
+                <div class="section-header">
+                    <h2 class="section-title">Procurement & Sizing Logistics</h2>
+                    <p class="section-subtitle">Everything you need to verify prior to joining our limited serialized seasonal launch groups.</p>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>How do I determine accurate physical sizing specs?</span>
+                            <i data-lucide="chevron-down" class="acc-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Our sizing configurations conform to architectural standard human proportions. We advise purchasing your standardized true physical dimension sizing. A comprehensive layout metric sheet ships with every initial storefront registration.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>What is your sustainable global return processing window?</span>
+                            <i data-lucide="chevron-down" class="acc-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>To reduce shipping emissions, returns are accepted within a strict 14-day window. Items must retain all original serialized security tags and unbroken protective dynamic packaging seals.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>Are restock frequencies planned for the Alpha series?</span>
+                            <i data-lucide="chevron-down" class="acc-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>No. Once the Alpha Series run sells out, the digital pattern plates are vaulted and destroyed to preserve design rarity and collector value metrics worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Client Inquiries / Bespoke Custom Form -->
+        <section id="contact" class="section scroll-animate alt-bg">
+            <div class="container matches-small-width">
+                <div class="card interaction-form-card">
+                    <h2 class="section-title">Join The Priority Inner Circle</h2>
+                    <p class="section-subtitle">Secure early-access whitelisting privileges for all future drop releases and micro-atelier allocations.</p>
+                    
+                    <form id="storefront-contact-form" novalidate>
+                        <div class="input-container">
+                            <label for="client-name">Full Client Name</label>
+                            <input type="text" id="client-name" placeholder="E.g., Alexander Mercer" required>
+                            <span class="alert-error">Name parameter verification missing.</span>
+                        </div>
+                        <div class="input-container">
+                            <label for="client-email">Digital Communication Address</label>
+                            <input type="email" id="client-email" placeholder="alex@mercerdesign.io" required>
+                            <span class="alert-error">Please type a correct verifiable email syntax structure.</span>
+                        </div>
+                        <div class="input-container">
+                            <label for="client-notes">Size Profiles / Aesthetic Alignment Notes</label>
+                            <textarea id="client-notes" rows="4" placeholder="Mention sizing notes, preferences, or technical requests..." required></textarea>
+                            <span class="alert-error">Message description string is too brief.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Register Secure Membership</span>
+                            <i data-lucide="fingerprint"></i>
+                        </button>
+                        <div class="form-feedback-message" id="form-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Modular Footer Structure -->
+    <footer class="footer">
+        <div class="container footer-layout-grid">
+            <div class="footer-profile-summary">
+                <a href="#" class="nav-logo">
+                    <i data-lucide="orbit" class="logo-icon"></i>
+                    <span>VORTEX</span>
+                </a>
+                <p class="footer-bio">Crafting premium, luxury minimalist garments built on principles of structural modularity and sustainable techwear systems.</p>
+                <div class="social-networks">
+                    <a href="https://github.com/masifgpt" target="_blank" aria-label="GitHub Profile"><i data-lucide="github"></i></a>
+                    <a href="#" aria-label="LinkedIn Enterprise"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram Lookbook"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#products">Alpha Outerwear</a></li>
+                    <li><a href="#products">Modular Bottoms</a></li>
+                    <li><a href="#products">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-col">
+                <h4>Engineering Office</h4>
+                <ul>
+                    <li><a href="#features">Material Science</a></li>
+                    <li><a href="#about">Our Atelier Systems</a></li>
+                    <li><a href="https://github.com/masifgpt" target="_blank">Brand Developer Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base-row">
+            <p>&copy; 2026 VORTEX Labs. Engineered & Curated by <a href="https://github.com/masifgpt" target="_blank" class="author-link">Asif Codes IO</a>. All platform code rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide SVGs -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
